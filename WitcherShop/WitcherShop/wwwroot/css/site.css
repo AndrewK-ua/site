@@ -1,0 +1,117 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.title-style {
+    font-size: 60px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 700;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.title-background {
+    height: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    background-color: gray;
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+.item {
+    background-size: 100%;
+    height: 310px;
+    width: 210px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    object-fit: cover;
+}
+
+.header {
+    width: 210px;
+    font-size: 40px;
+    color: darkgray;
+    text-align: justify;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.picture-background {
+    background-color: white;
+    width: 200px;
+    height: 300px;
+    border-radius: 25px;
+}
+
+.picture-container {
+    position: relative;
+    border-radius: 25px;
+    border: 3px solid darkgray;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+}
+
+.table-style {
+    height: 600px;
+    width: 600px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+.table-cell-style {
+    height: 1000px;
+    width: 700px;
+    padding: 20px;
+}
+
+.button-add {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+
+    position: relative;
+    z-index: 1;
+    left: 85px;
+    top: -170px;
+    width: 50px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 20px;
+}
+
+.button-add:hover {
+    background: rgba(255,255,255,.2);
+}
+
+.button-add:hover {
+    background: white;
+}
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
