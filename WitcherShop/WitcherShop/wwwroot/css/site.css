@@ -126,36 +126,100 @@
     display: block;
 }
 
+.picture-background:hover .button-minus {
+    display: block;
+}
+
 .button-add:hover {
     background: rgba(255,255,255,.7);
 }
 
-.picture-background .button-plus {
+.picture-background .button-minus {
     position: absolute;
+    user-select: none;
+    display: none;
     z-index: 3;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background-color: black;
     text-align: center;
     color: white;
+    height: 30px;
+    width: 30px;
+    margin-top: 225px;
+    margin-left: 30px;
+    font-size: 26px;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    transition: 0.5s;
+    border: 1px solid black;
+    line-height: 30px;
 }
 
-.button-plus::after {
+.button-minus:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.picture-background .button-plus {
     position: absolute;
+    user-select: none;
+    display: none;
     z-index: 3;
-    content: '';
-    background: linear-gradient(to left bottom, transparent 50%, green 50%), left / 50% 100% no-repeat;
-    /*border-top-color: red;*/
+    top: 0;
+    left: 0;
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin-top: 225px;
+    margin-left: 140px;
+    font-size: 26px;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    transition: 0.5s;
+    border: 1px solid black;
+    line-height: 30px;
 }
 
 .button-plus:hover {
-    
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+.picture-background input {
+    position: absolute;
+    display: none;    
+    z-index:3;
+    height: 30px;
+    width: 50px;
+    margin-left: 75px;
+    margin-top: 225px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    font-size: 20px;
+    color: black;
+    text-align: center;
 }
+
+.picture-background:hover input {
+    display: block;
+}
+
+.picture-background input::selection {
+    color: white;
+    background-color: black;
+}
+
+
+
+    /* QR code generator */
+    #qrCode {
+        margin: 15px;
+    }
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
