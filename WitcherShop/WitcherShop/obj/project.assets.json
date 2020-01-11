@@ -11507,11 +11507,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andrew\\source\\repos\\WitcherShop\\WitcherShop\\WitcherShop.csproj",
+      "projectUniqueName": "C:\\Users\\Andrew\\Documents\\GitHub\\site\\WitcherShop\\WitcherShop\\WitcherShop.csproj",
       "projectName": "WitcherShop",
-      "projectPath": "C:\\Users\\Andrew\\source\\repos\\WitcherShop\\WitcherShop\\WitcherShop.csproj",
+      "projectPath": "C:\\Users\\Andrew\\Documents\\GitHub\\site\\WitcherShop\\WitcherShop\\WitcherShop.csproj",
       "packagesPath": "C:\\Users\\Andrew\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andrew\\source\\repos\\WitcherShop\\WitcherShop\\obj\\",
+      "outputPath": "C:\\Users\\Andrew\\Documents\\GitHub\\site\\WitcherShop\\WitcherShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
