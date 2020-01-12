@@ -60,7 +60,6 @@
 .picture-background img {
     border-radius: 25px;
     border: 3px solid darkgray;
-    /*z-index: 2;*/
     left: 0;
     top: 0;
 }
@@ -106,15 +105,37 @@
     background-color: rgba(255,255,255, .5);
     border-radius: 25px;
     color: black;
-    padding-top: 100px;
+    padding-top: 20px;
     text-align: center;
     opacity: 0;
     -webkit-transition: all .25s;
     -o-transition: all .25s;
     transition: all .25s;
+    user-select: none;
+}
+
+.input-error {
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: red;
+    font-size: 10px;
+    margin-top: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    user-select: none;
+    display: none;
+    opacity: 0;
 }
 
 .picture-background:hover .descr {
+    opacity: 1;
+}
+
+.picture-background:hover .input-error {
     opacity: 1;
 }
 

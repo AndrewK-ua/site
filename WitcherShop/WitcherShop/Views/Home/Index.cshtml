@@ -6,6 +6,10 @@
         }
         
         ul {
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            left: 0;
             background-color: white;
             height: 100%;
             width: 100%;
@@ -15,6 +19,11 @@
             margin-top: 2px;
             margin-bottom: 2px;
         }
+
+        ul li {
+            color: red;
+            font-size: 20px;
+        }
     </style>
     <table>
         <tr>
@@ -23,90 +32,99 @@
         </tr>
         <tr>
             <td class="item">
-                <div class="picture-background">
+                <div id="the-last-wish" class="picture-background">
                     <span class="descr">Description</span>
-                    <div class="button-add" height="30" width="20">ADD</div>
-                    <div class="button-minus" height="50" width="50">&ndash;</div>
-                    <div class="button-plus" height="50" width="50">+</div>
-                    <input id="input1" maxlength="2" type="text"/>
+                    <span id="inputError1" class="input-error">*error - bad symbols entered</span>
+                    <div id="button-add1" class="button-add" height="30" width="20">ADD</div>
+                    <div id="button-minus1" class="button-minus" height="50" width="50">&ndash;</div>
+                    <div id="button-plus1" class="button-plus" height="50" width="50">+</div>
+                    <input id="input1" maxlength="2" type="text" value="0"/>
                     <img src="~/images/the-last-wish.jpg" width="200" height="300">
                 </div>
             </td>
             <td class="item">
-                <div class="picture-background">
+                <div id="sword-of-destiny" class="picture-background">
                     <span class="descr">Description</span>
-                    <div class="button-add" height="30" width="20">ADD</div>
-                    <div class="button-minus" height="50" width="50">&ndash;</div>
-                    <div class="button-plus" height="50" width="50">+</div>
-                    <input id="input2" maxlength="2" type="text" />
+                    <span id="inputError2" class="input-error">*error - bad symbols entered</span>
+                    <div id="button-add2" class="button-add" height="30" width="20">ADD</div>
+                    <div id="button-minus2" class="button-minus" height="50" width="50">&ndash;</div>
+                    <div id="button-plus2" class="button-plus" height="50" width="50">+</div>
+                    <input id="input2" maxlength="2" type="text" value="0"/>
                     <img src="~/images/sword-of-destiny.jpg" width="200" height="300">
                 </div>
             </td>
             <td class="item">
-                <div class="picture-background">
+                <div id="blood-of-elves" class="picture-background">
                     <span class="descr">Description</span>
-                    <div class="button-add" height="30" width="20">ADD</div>
-                    <div class="button-minus" height="50" width="50">&ndash;</div>
-                    <div class="button-plus" height="50" width="50">+</div>
-                    <input id="input3" maxlength="2" type="text" />
+                    <span id="inputError3" class="input-error">*error - bad symbols entered</span>
+                    <div id="button-add3" class="button-add" height="30" width="20">ADD</div>
+                    <div id="button-minus3" class="button-minus" height="50" width="50">&ndash;</div>
+                    <div id="button-plus3" class="button-plus" height="50" width="50">+</div>
+                    <input id="input3" maxlength="2" type="text"  value="0" />
                     <img src="~/images/blood-of-elves.jpg" width="200" height="300">
                 </div>
             </td>
-            <td class="item">
-                <ul>
+            <td class="item" style="position: relative">
+                <ul id="bag">
+                    
                 </ul>
             </td>
         </tr>
         <tr>
             <td class="item">
-                <div class="picture-background">
+                <div id="time-of-contempt" class="picture-background">
                     <span class="descr">Description</span>
-                    <div class="button-add" height="30" width="20">ADD</div>
-                    <div class="button-minus" height="50" width="50">&ndash;</div>
-                    <div class="button-plus" height="50" width="50">+</div>
-                    <input id="input4" maxlength="2" type="text" />
+                    <span id="inputError4" class="input-error">*error - bad symbols entered</span>
+                    <div id="button-add4"class="button-add" height="30" width="20">ADD</div>
+                    <div id="button-minus4" class="button-minus" height="50" width="50">&ndash;</div>
+                    <div id="button-plus4" class="button-plus" height="50" width="50">+</div>
+                    <input id="input4" maxlength="2" type="text"  value="0" />
                     <img src="~/images/time-of-contempt.jpg" width="200" height="300">
                 </div>
             </td>
             <td class="item">
-                <div class="picture-background">
+                <div id="baptism-of-fire" class="picture-background">
                     <span class="descr">Description</span>
-                    <div class="button-add" height="30" width="20">ADD</div>
-                    <div class="button-minus" height="50" width="50">&ndash;</div>
-                    <div class="button-plus" height="50" width="50">+</div>
-                    <input id="input5" maxlength="2" type="text" />
+                    <span id="inputError5" class="input-error">*error - bad symbols entered</span>
+                    <div id="button-add5" class="button-add" height="30" width="20">ADD</div>
+                    <div id="button-minus5" class="button-minus" height="50" width="50">&ndash;</div>
+                    <div id="button-plus5" class="button-plus" height="50" width="50">+</div>
+                    <input id="input5" maxlength="2" type="text"  value="0" />
                     <img src="~/images/baptism-of-fire.jpg" width="200" height="300">
                 </div>
             </td>
             <td class="item">
-                <div class="picture-background">
+                <div id="the-tower-of-swallow" class="picture-background">
                     <span class="descr">Description</span>
-                    <div class="button-add" height="30" width="20">ADD</div>
-                    <div class="button-minus" height="50" width="50">&ndash;</div>
-                    <div class="button-plus" height="50" width="50">+</div>
-                    <input id="input6" maxlength="2" type="text" />
+                    <span id="inputError6" class="input-error">*error - bad symbols entered</span>
+                    <div id="button-add6" class="button-add" height="30" width="20">ADD</div>
+                    <div id="button-minus6" class="button-minus" height="50" width="50">&ndash;</div>
+                    <div id="button-plus6" class="button-plus" height="50" width="50">+</div>
+                    <input id="input6" maxlength="2" type="text"  value="0" />
                     <img src="~/images/the-tower-of-swallow.jpg" width="200" height="300">
                 </div>
             </td>
         </tr>
         <tr>
             <td class="item">
-                <div class="picture-background">
+                <div id="the-lady-of-the-lake" class="picture-background">
                     <span class="descr">Description</span>
-                    <div class="button-add" height="30" width="20">ADD</div>
-                    <div class="button-minus" height="50" width="50">&ndash;</div>
-                    <div class="button-plus" height="50" width="50">+</div>
-                    <input id="input7" maxlength="2" type="text" />
+                    <span id="inputError7" class="input-error">*error - bad symbols entered</span>
+                    <div id="button-add7" class="button-add" height="30" width="20">ADD</div>
+                    <div id="button-minus7" class="button-minus" height="50" width="50">&ndash;</div>
+                    <div id="button-plus7" class="button-plus" height="50" width="50">+</div>
+                    <input id="input7" maxlength="2" type="text"  value="0" />
                     <img src="~/images/the-lady-of-the-lake.jpg" width="200" height="300">
                 </div>
             </td>
             <td class="item">
-                <div class="picture-background">
+                <div id="season-of-storms" class="picture-background">
                     <span class="descr">Description</span>
-                    <div class="button-add" height="30" width="20">ADD</div>
-                    <div class="button-minus" height="50" width="50">&ndash;</div>
-                    <div class="button-plus" height="50" width="50">+</div>
-                    <input id="input8" maxlength="2" type="text" />
+                    <span id="inputError8" class="input-error">*error - bad symbols entered</span>
+                    <div id="button-add8" class="button-add" height="30" width="20">ADD</div>
+                    <div id="button-minus8" class="button-minus" height="50" width="50">&ndash;</div>
+                    <div id="button-plus8" class="button-plus" height="50" width="50">+</div>
+                    <input id="input8" maxlength="2" type="text"  value="0" />
                     <img src="~/images/season-of-storms.jpg" width="200" height="300">
                 </div>
             </td>
