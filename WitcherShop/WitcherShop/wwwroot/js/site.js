@@ -7,8 +7,14 @@ let buttonsAdd = ['button-add1', 'button-add2', 'button-add3', 'button-add4', 'b
     'button-add6', 'button-add7', 'button-add8']
 let descrArr = ['inputError1', 'inputError2', 'inputError3', 'inputError4', 'inputError5',
     'inputError6', 'inputError7', 'inputError8'];
-let booksTitles = ['The Last Wish', 'Sword Of Destiny', 'Blood Of Elves', 'Time Of Contempt',
-    'Baptism Of Fire', 'The Tower Of Swallow', 'The Lady Of The Lake', 'Season Of Storms'];
+//let booksTitles = ['The Last Wish', 'Sword Of Destiny', 'Blood Of Elves', 'Time Of Contempt',
+//    'Baptism Of Fire', 'The Tower Of Swallow', 'The Lady Of The Lake', 'Season Of Storms'];
+//let booksPrices = [9.99, 14.99, 29.99, 39.99, 19.99, 24.99, 49.99, 89.99];
+
+let books = [{ title: 'The Last Wish', price: 9.99 }, { title: 'Sword Of Destiny', price: 14.99 },
+    { title: 'Blood Of Elves', price: 29.99 }, { title: 'Time Of Contempt', price: 39.99 },
+    { title: 'Baptism Of Fire', price: 19.99 }, { title: 'The Tower Of Swallow', price: 24.99 },
+    { title: 'The Lady Of The Lake', price: 49.99 }, { title: 'Season Of Storms', price: 89.99 }];
 for (let i = 0; i < 8; i++) {
     let error = false;
     let inputElem = document.getElementById(inputArr[i]);
@@ -59,15 +65,33 @@ for (let i = 0; i < 8; i++) {
         let inputElem = document.getElementById(inputArr[i]);
         if (error == false) {
             if (Number(inputElem.value) > 0) {
-                let liLast = document.createElement('li');
-                let title = booksTitles[i];
+                let title = books[i].title;
                 let bag = document.getElementById('bag');
-                console.log(bag.innerHTML);
                 if (bag.innerHTML.indexOf(title) != -1) {
-
+                    let strWithoutPrice = document.getElementById(title).innerHTML.slice(0, document.getElementById(title).innerHTML.lastIndexOf(' '));
+                    let num = Number(strWithoutPrice.replace(/\D+/g, ''));
+                    if (num + Number(inputElem.value) <= 99) {
+                        num += Number(inputElem.value);
+                        let newStr = document.getElementById(title)
+                            .innerHTML.slice(0, document.getElementById(title).innerHTML.indexOf(title)
+                                + title.length + 2) + String(num) + ' ' + String((books[i].price * String(num)).toFixed(2)) + '$';
+                        document.getElementById(title).innerHTML = newStr;
+                        document.getElementById('list-error').innerHTML = '';
+                    }
+                    else {
+                        document.getElementById('list-error').innerHTML = 'error! you cannot buy more than 99 equal books';
+                    }
                 }
                 else {
-                    liLast.innerHTML = title + ':' + inputElem.value;
+                    let liLast = document.createElement('li');
+                    liLast.setAttribute('class', 'bag-list-item');
+                    liLast.innerHTML = title + ': ' + inputElem.value + ' ';
+                    books.forEach((item, index, books) => {
+                        if (item.title == title) {
+                            liLast.innerHTML += String((item.price * Number(inputElem.value)).toFixed(2)) + '$';
+                        }
+                    });
+                    liLast.setAttribute('id', title);
                     bag.append(liLast);
                 }
             }

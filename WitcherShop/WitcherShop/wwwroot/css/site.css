@@ -235,12 +235,37 @@
     background-color: black;
 }
 
+#bag {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border: 3px solid darkgray;
+    border-radius: 25px;
+    opacity: 0.5;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    display: block;
+}
 
+#bag .bag-list-item {
+    color: red;
+    font-size: 16px;
+}
 
-    /* QR code generator */
-    #qrCode {
-        margin: 15px;
-    }
+#bag #list-error {
+    color: red;
+    font-size: 8px;
+    list-style-type: none;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
