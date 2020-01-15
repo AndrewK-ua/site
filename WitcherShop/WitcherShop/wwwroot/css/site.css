@@ -42,6 +42,7 @@
 
 .header {
     width: 210px;
+    font-weight: 700;
     font-size: 40px;
     color: darkgray;
     text-align: justify;
@@ -236,32 +237,108 @@
 }
 
 #bag {
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    left: 0;
+    position: fixed;
+    float: right;
+    top: 170px;
+    right: 0px;
+    overflow-x: hidden;
+    z-index: 100;
     background-color: white;
-    height: 100%;
-    width: 100%;
+    height: 400px;
+    width: 300px;
     border: 3px solid darkgray;
     border-radius: 25px;
-    opacity: 0.5;
+    opacity: 0;
     margin-top: 2px;
     margin-bottom: 2px;
-    display: block;
+    transition: 0.5s;
 }
 
 #bag .bag-list-item {
     color: red;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 #bag #list-error {
     color: red;
-    font-size: 8px;
+    font-size: 10px;
     list-style-type: none;
 }
 
+#bag #list-title {
+    color: darkgray;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-size: 48px;
+    list-style-type: none;
+    text-align: center;
+    font-stretch: ultra-expanded;
+    padding-right: 30px;
+    font-weight: 700;
+}
+
+.button-buy {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 280px;
+    background: white;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-width: 1px 1px 1px 2px;
+    border-color: #555;
+    background-color: #777;
+}
+
+::-webkit-scrollbar-track {
+    border-width: 0;
+}
+
+::-webkit-scrollbar-track:hover {
+    border-left: solid 1px #aaa;
+    background-color: #eee;
+}
+
+#hide-show-bag {
+    user-select: none;
+    background-color: black;
+    color: white;
+    position: fixed;
+    float: right;
+    top: 170px;
+    right: 0px;
+    z-index: 101;
+    font-weight: 900;
+    border: 2px solid darkgray;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 50px;
+    width: 60px;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    transition: 0.5s;
+    display: block;
+}
+
+#hide-show-bag:hover {
+    background-color: white;
+    color: black;
+}
 /* QR code generator */
 #qrCode {
     margin: 15px;
